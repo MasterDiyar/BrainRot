@@ -10,5 +10,6 @@ public partial class Arrow : Bullet
         if (body is User user) 
             if (user.Me != SpawnMate)
                 QueueFree();
+        
     }
 }
