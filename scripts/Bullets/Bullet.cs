@@ -20,7 +20,7 @@ public partial class Bullet : Area2D
         timer.Timeout += QueueFree;
     }
 
-    private void OnBodyEntered(Node2D body)
+    protected virtual void OnBodyEntered(Node2D body)
     {
         if (body is not User user) return;
         if (user.Me != SpawnMate)

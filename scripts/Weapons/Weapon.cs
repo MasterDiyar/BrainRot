@@ -2,7 +2,7 @@ using Godot;
 
 namespace benzo.scripts;
 
-public partial class Weapon : Sprite2D
+public partial class Weapon : Sprite2D, IWeapon
 {
     [Export] public PackedScene BulletScene;
     [Export] public float Damage = 20f;
@@ -16,7 +16,6 @@ public partial class Weapon : Sprite2D
     {
         
     }
-
     public virtual void Animation()
     {
         
