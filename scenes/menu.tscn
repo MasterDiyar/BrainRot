@@ -1,0 +1,120 @@
+[gd_scene load_steps=9 format=3 uid="uid://ctibkq83jfnma"]
+
+[ext_resource type="Script" uid="uid://brmgsf8tj6dmw" path="res://scripts/Menu.cs" id="1_con2f"]
+[ext_resource type="Texture2D" uid="uid://dyvfc7ou5bfiv" path="res://brackeys_platformer_assets/drawed/userSelect.png" id="2_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://drmnocevi2myi" path="res://brackeys_platformer_assets/drawed/button.png" id="3_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://cy6kotnt6vmes" path="res://brackeys_platformer_assets/sprites/knight.png" id="4_mhnvy"]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_mhnvy"]
+button_index = 13
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_4ytvr"]
+events = [SubResource("InputEventJoypadButton_mhnvy")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_g3eks"]
+button_index = 14
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_v86rl"]
+events = [SubResource("InputEventJoypadButton_g3eks")]
+
+[node name="menu" type="Control"]
+texture_filter = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_con2f")
+
+[node name="UserSelect" type="Sprite2D" parent="."]
+texture = ExtResource("2_mhnvy")
+centered = false
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 600.0
+offset_right = 172.0
+offset_bottom = 653.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "<"
+icon = ExtResource("3_4ytvr")
+flat = true
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 600.0
+offset_right = 514.0
+offset_bottom = 653.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = ">"
+icon = ExtResource("3_4ytvr")
+flat = true
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1406.0
+offset_top = 600.0
+offset_right = 1474.0
+offset_bottom = 653.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+button_mask = 0
+shortcut = SubResource("Shortcut_4ytvr")
+text = "<"
+icon = ExtResource("3_4ytvr")
+flat = true
+icon_alignment = 1
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1747.0
+offset_top = 600.0
+offset_right = 1815.0
+offset_bottom = 653.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_v86rl")
+text = ">"
+icon = ExtResource("3_4ytvr")
+flat = true
+icon_alignment = 1
+
+[node name="start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 823.0
+offset_top = 734.0
+offset_right = 1098.0
+offset_bottom = 826.0
+flat = true
+
+[node name="p1" type="Sprite2D" parent="."]
+position = Vector2(305, 290)
+scale = Vector2(12, 12)
+texture = ExtResource("4_mhnvy")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="wep" type="Sprite2D" parent="p1"]
+position = Vector2(-10, 20)
+scale = Vector2(0.125, 0.125)
+
+[node name="p2" type="Sprite2D" parent="."]
+position = Vector2(1609, 290)
+scale = Vector2(-12, 12)
+texture = ExtResource("4_mhnvy")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="wep" type="Sprite2D" parent="p2"]
+position = Vector2(-10, 18)
+rotation = 3.1415927
+scale = Vector2(0.125, -0.125)

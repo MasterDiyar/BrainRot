@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://emfmgaq3nspc"]
+
+[ext_resource type="Texture2D" uid="uid://cixkbhobket2w" path="res://brackeys_platformer_assets/drawed/ashsword.png" id="1_k5u8d"]
+[ext_resource type="Script" uid="uid://c5lfykiv8yuyr" path="res://scripts/Weapons/Ashsword.cs" id="2_elimu"]
+[ext_resource type="PackedScene" uid="uid://qdgaox2e17am" path="res://scenes/player/bullets/swing.tscn" id="3_1i1wp"]
+
+[node name="Ashsword" type="Sprite2D"]
+texture_filter = 3
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_k5u8d")
+offset = Vector2(5, -5)
+script = ExtResource("2_elimu")
+SwingScene = ExtResource("3_1i1wp")

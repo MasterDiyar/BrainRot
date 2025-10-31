@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://du8y8rgjxe76a"]
+
+[ext_resource type="Script" uid="uid://3wjf6ao6estp" path="res://scripts/globalClass/KeyBoardInput.cs" id="1_x4pu2"]
+
+[node name="KeyboardInput" type="Node"]
+script = ExtResource("1_x4pu2")

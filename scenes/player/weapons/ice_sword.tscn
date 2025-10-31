@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnaawtgev0nsf"]
+
+[ext_resource type="Texture2D" uid="uid://dcrawrmrmjq68" path="res://brackeys_platformer_assets/drawed/ice_sword.png" id="1_tfp4b"]
+[ext_resource type="Script" uid="uid://deg4b1hatfmhu" path="res://scripts/Weapons/IceSword.cs" id="2_dgwwm"]
+[ext_resource type="PackedScene" uid="uid://qdgaox2e17am" path="res://scenes/player/bullets/swing.tscn" id="3_lp3ki"]
+
+[node name="IceSword" type="Sprite2D"]
+texture_filter = 3
+texture = ExtResource("1_tfp4b")
+script = ExtResource("2_dgwwm")
+SwingScene = ExtResource("3_lp3ki")

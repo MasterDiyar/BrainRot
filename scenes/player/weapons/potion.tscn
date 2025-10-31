@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpqbiop2impcr"]
+
+[ext_resource type="Texture2D" uid="uid://d161rrdnyp2sp" path="res://brackeys_platformer_assets/drawed/potion.png" id="1_r670h"]
+[ext_resource type="Script" uid="uid://b3d8gc7utsc77" path="res://scripts/Weapons/Potion.cs" id="2_r670h"]
+
+[node name="Potion" type="Sprite2D"]
+texture_filter = 3
+texture = ExtResource("1_r670h")
+script = ExtResource("2_r670h")

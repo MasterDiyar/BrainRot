@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmbqarf8uda2p"]
+
+[ext_resource type="Texture2D" uid="uid://b2hw4tupedyin" path="res://brackeys_platformer_assets/drawed/bow.png" id="1_nk7ir"]
+[ext_resource type="Script" uid="uid://du4v15nrxtfv2" path="res://scripts/Weapons/Bow.cs" id="2_nk7ir"]
+
+[node name="Bow" type="Sprite2D"]
+texture_filter = 3
+texture = ExtResource("1_nk7ir")
+script = ExtResource("2_nk7ir")

@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://qdgaox2e17am"]
+
+[ext_resource type="Texture2D" uid="uid://b7kqbiaiocff" path="res://brackeys_platformer_assets/drawed/swing1.png" id="1_asmwj"]
+[ext_resource type="Script" uid="uid://dmj7755d13ovt" path="res://scripts/Bullets/Swing.cs" id="1_k0kce"]
+[ext_resource type="Texture2D" uid="uid://d1kgari528nq1" path="res://brackeys_platformer_assets/drawed/swing2.png" id="2_k0kce"]
+[ext_resource type="Texture2D" uid="uid://btfghs2qpoy8j" path="res://brackeys_platformer_assets/drawed/swing3.png" id="3_ugqhm"]
+[ext_resource type="Texture2D" uid="uid://bdu5kkmoxydq8" path="res://brackeys_platformer_assets/drawed/swing4.png" id="4_urm75"]
+[ext_resource type="Texture2D" uid="uid://cnmku1aj6f085" path="res://brackeys_platformer_assets/drawed/swing5.png" id="5_7na3r"]
+[ext_resource type="Texture2D" uid="uid://c7pers74qmxgf" path="res://brackeys_platformer_assets/drawed/swing6.png" id="6_hngx8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_asmwj"]
+radius = 22.0
+height = 92.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r0ivn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_asmwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_k0kce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ugqhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_urm75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7na3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hngx8")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="swingarea" type="Area2D" node_paths=PackedStringArray("anim")]
+script = ExtResource("1_k0kce")
+anim = NodePath("swing")
+Damage = 36.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_asmwj")
+
+[node name="swing" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(20, 0)
+sprite_frames = SubResource("SpriteFrames_r0ivn")
+frame_progress = 0.82343864
+
+[node name="Timer" type="Timer" parent="."]

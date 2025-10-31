@@ -1,0 +1,17 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="scenes\menu.tscn" />
+    <Content Include="scenes\player\bullets\swing.tscn" />
+    <Content Include="scenes\player\movement\joy_input.tscn" />
+    <Content Include="scenes\player\movement\keyboard_input.tscn" />
+    <Content Include="scenes\player\movement\movement.tscn" />
+    <Content Include="scenes\player\testmap.tscn" />
+    <Content Include="scenes\player\user.tscn" />
+    <Content Include="scenes\player\weapons\ice_sword.tscn" />
+  </ItemGroup>
+</Project>

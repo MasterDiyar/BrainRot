@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhngtlaw2hhha"]
+
+[ext_resource type="Script" uid="uid://blo32ko6ac4lk" path="res://scripts/globalClass/JoyInput.cs" id="1_4jgk0"]
+
+[node name="JoyInput" type="Node"]
+script = ExtResource("1_4jgk0")

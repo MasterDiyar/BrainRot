@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbosucgcxrg08"]
+
+[ext_resource type="PackedScene" uid="uid://drfgaqh7wcxn4" path="res://scenes/player/bullets/arrow.tscn" id="1_16nye"]
+[ext_resource type="Script" uid="uid://dyc5hpkneaoo8" path="res://scripts/Bullets/Star.cs" id="2_56gna"]
+[ext_resource type="Texture2D" uid="uid://clxs1yp5rnx5g" path="res://brackeys_platformer_assets/drawed/star.png" id="3_ob3kq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16nye"]
+size = Vector2(13, 10)
+
+[sub_resource type="Gradient" id="Gradient_16nye"]
+colors = PackedColorArray(0.92, 0.82033336, 0.32200003, 0.6784314, 0.92, 0.85866666, 0.55200005, 0)
+
+[node name="star" instance=ExtResource("1_16nye")]
+script = ExtResource("2_56gna")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(6.5, -1)
+shape = SubResource("RectangleShape2D_16nye")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_ob3kq")
+
+[node name="Timer" parent="." index="2"]
+wait_time = 6.0
+
+[node name="Line2D" type="Line2D" parent="." index="3"]
+points = PackedVector2Array(9, -1, -26, -1)
+default_color = Color(0.92156863, 0.81960785, 0.32156864, 1)
+gradient = SubResource("Gradient_16nye")
+joint_mode = 1
+end_cap_mode = 2

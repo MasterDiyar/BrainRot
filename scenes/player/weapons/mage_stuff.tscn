@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://dacuj1fxa8403"]
+
+[ext_resource type="Texture2D" uid="uid://b5ie8im0jlyp7" path="res://brackeys_platformer_assets/drawed/mage stuff.png" id="1_4mytk"]
+[ext_resource type="Script" uid="uid://boeb5lilnvmwd" path="res://scripts/Weapons/MageStuff.cs" id="2_ftvpr"]
+[ext_resource type="PackedScene" uid="uid://bbosucgcxrg08" path="res://scenes/player/bullets/star.tscn" id="3_7f0nc"]
+
+[node name="MageStuff" type="Sprite2D"]
+texture_filter = 3
+texture = ExtResource("1_4mytk")
+script = ExtResource("2_ftvpr")
+BulletScene = ExtResource("3_7f0nc")

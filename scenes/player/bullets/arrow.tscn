@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://drfgaqh7wcxn4"]
+
+[ext_resource type="Script" uid="uid://bo3y2bm6mbbr1" path="res://scripts/Bullets/Arrow.cs" id="1_s5byp"]
+[ext_resource type="Texture2D" uid="uid://bxebmy8546pgp" path="res://brackeys_platformer_assets/drawed/arrow.png" id="2_3sxhe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iti17"]
+size = Vector2(19, 7)
+
+[node name="arrow" type="Area2D"]
+texture_filter = 3
+script = ExtResource("1_s5byp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_iti17")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_3sxhe")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.609
